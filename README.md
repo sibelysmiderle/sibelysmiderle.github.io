@@ -1,1 +1,1 @@
-oi galerinha do meu canal
+<div align="center">oi galerinha do meu canal
