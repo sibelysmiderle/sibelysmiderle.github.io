@@ -60,3 +60,17 @@ width: 200px;
 li {
     display: inline;
 }
+
+figure {
+	width:500px;
+	height:500px;
+}
+
+figurecaption p, i {
+	text-align: center;
+}
+
+img {
+	width: 100%
+}
+	
