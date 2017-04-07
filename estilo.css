@@ -1,0 +1,62 @@
+
+img {
+float: left;
+padding-right; 200px;
+width: 200px; 
+}
+ 
+ 
+ 
+ footer{
+  padding:1em;
+ background-color: purple;
+ color:pink;
+ 
+ }
+ 
+ table {
+ border-collapse: collapse;
+ background-color: white;
+ width: 70%;
+ padding-left: 50px;
+ }
+ 
+ td.a {
+width: 200px;
+} 
+ table, td, tr {
+ border: 2px solid black; 
+ }
+ 
+ 
+ 
+ article {
+ background-color: #8470FF;
+ padding: 50px;
+ padding-left: 200px;
+ padding-right: 200px;
+ }
+ 
+ nav {
+ background-color: purple;
+ text-align: center;
+ color: pink;
+ font-size: 20px;
+ }
+ 
+ header {
+ padding: 1em;
+ text-align: center;
+ background-color: purple;
+ color:pink;
+ font-size: 40px;
+ }
+	  
+	  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+}
