@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
   
   <style>
 	 
@@ -18,11 +19,57 @@ background-image: url(https://static.tumblr.com/89bfe91b72fb5ada43e605978e4a2ec9
 	 body{
 		 background-color: #60C6BC;
 	 }
+	 
+	 .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+	  padding: 0px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  
+  .inf { 
+  font-family: pangolin;
+  }
+  
+  * {
+  font-family: 'Pangolin', cursive;
+  }
+  
+  
+  
+  
 </style>
 
 </head>
 
 <body>
+
+​<nav class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="glyphicon glyphicon-globe"></span>
+                          
+      </button>
+      <a class="navbar-brand" href="#">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">SOBRE</a></li>
+        <li><a href="#">PORTIFÓLIO</a></li>
+        <li><a href="#">CONTATOS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 
 <div class="jumbotron text-center">
@@ -33,22 +80,39 @@ background-image: url(https://static.tumblr.com/89bfe91b72fb5ada43e605978e4a2ec9
   
   </div>
   
-  <center><h3 style="font-family: pangolin;"> um pouquinho sobre mim
+  <center><h2> um pouquinho sobre mim</h2></center>
+  
+  ​<div class="container">
+           
+  
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+  <div class="inf">
+    <div class="col-sm-4">
+      <h3>Informações pessoais</h3>
+      <p><span class="icon-star"></span> <b> NOME: </b> Sibely Smiderle Alves </p> 
+	  <p><span class="icon-star"></span> <b> IDADE: </b> 16 anos </p> 
+	  <p><span class="icon-star"></span> <b> CIDADE NATAL: </b> Vitória-ES</p> 
+	  <p><span class="icon-star"></span> <b> ESCOLA: </b> IFES </p>
+      </div>
+	  
+	  
     </div>
-    <div class="col-sm-6">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="col-sm-8">
+      
+      <h3> "minha frase lalalalalalaalalalalal"</h3>
+      
     </div>
-    
+   
   </div>
 </div>
+
+<div class="col-sm-12">
+      <h3><center>PORTIFÓLIO</center></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
 
 </body>
 </html>
