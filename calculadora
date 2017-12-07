@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<!-- dupla Isaque Siqueira e Sibely Alves -->
+<head>
+	<style>
+		.botao{
+		width:100%;
+		height: 100%;
+		margin:2px
+		}
+		.cal{
+		background-color:rgb(204, 204, 255);
+		padding:100px;
+		border: solid
+		}
+	</style>
+  <title>Calculadora</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+	var a = 0
+	var op = ''
+	var res = 0
+    var num1 = ''
+    var num2 = ''
+    
+	function addNum(cl){
+		a = document.getElementById('cl').value = document.getElementById('cl').value + cl;
+	}
+    
+    function Arm(a, operacao){
+    	if(num1 == ''){
+        	num1 = a;
+            op = operacao;
+            limpa()
+        } else {        
+        	num2 = a;
+            numOp(op, num1, num2);
+        }
+    }
+    
+	function numOp(op, a, b){
+    if (document.getElementById('cl').value == ''){
+        alert("O Campo esta vázio digite um valor");
+    }
+    else{
+	 if (op == "soma") {
+       document.getElementById('cl').value = '';
+       res = parseInt(num1) + parseInt(num2);
+     } else {
+       if (op == "subtração") {
+         document.getElementById('cl').value = '';
+         res = num1-num2;
+      } else {
+         if (op == "multiplicar") {
+            res = num1*num2;
+            document.getElementById('cl').value = '';
+         } else {
+            res = num1/num2;
+            document.getElementById('cl').value ='';
+         }
+      }
+	 }
+    
+     }
+     limpa()
+     document.getElementById('cl').value = res;
+     num1 = '';
+     num2 = '';
+	}
+	function limpa() {
+		document.getElementById('cl').value = '';
+	}
+	
+	</script>
+</head>
+<body>
+<center>
+	<div class = "container-fluid cal" >
+		<input type = "text" style = "width:100% ; height:54px" id = "cl">
+		<br>
+		<div class = "row" style = "font-size:25px">
+		<div class = "col-xs-3">
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(1)">1</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(4)">4</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(7)">7</button>
+		<button type = "button" class = "btn botao" style = "background-color:red; font-size:25px" onclick = "limpa()"> C </button>
+		</div>
+		<div class = "col-xs-3">
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(2)">2</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(5)">5</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(8)">8</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(0)">0</button>
+		</div>
+		<div class = "col-xs-3">
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(3)">3</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(6)" >6</button>
+		<button type = "button" class = "btn botao" style = "background-color:black; color:white; font-size:25px" onclick = "addNum(9)">9</button>
+		<button type = "button" class = "btn botao" style = "background-color:rgb(153, 255, 204); font-size:25px" onclick ="Arm(document.getElementById('cl').value, op)" >=</button>
+		</div>
+		<div class = "col-xs-3">
+		<button type = "button" class = "btn botao" style = "background-color:orange; font-size:25px" onclick = "Arm(document.getElementById('cl').value, 'soma')">+</button>
+		<button type = "button" class = "btn botao" style = "background-color:orange; font-size:25px" onclick = "Arm(document.getElementById('cl').value, 'subtração')">-</button>
+		<button type = "button" class = "btn botao" style = "background-color:orange; font-size:25px" onclick = "Arm(document.getElementById('cl').value, 'multiplicar')">*</button>
+		<button type = "button" class = "btn botao" style = "background-color:orange; font-size:25px" onclick = "Arm(document.getElementById('cl').value, 'divisão')">/</button>
+		</div>
+		</div>
+</center>
+</body>
+</html>
